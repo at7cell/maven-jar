@@ -6,6 +6,6 @@ RUN apt-get update && \
 
 WORKDIR /app
 
-RUN git clone https://github.com/USERNAME/REPOSITORY.git
+RUN git clone https://github.com/at7cell/maven-jar.git
 
 CMD ["bash"]
