@@ -1,11 +1,7 @@
-FROM ubuntu:22.04
-
-RUN apt-get update 
-    apt-get install -y git 
-    rm -rf /var/lib/apt/lists
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
-RUN git clone https://github.com/at7cell/maven-jar.git
+COPY anurag-demo.jar app.jar
 
-CMD ["bash"]
+CMD ["java", "-jar", "app.jar"]
